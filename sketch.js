@@ -65,7 +65,8 @@ function draw(){
     platform.display();
     //log6.display();
     slingshot.display();    
-    text("Xpos: "+mouseX +"yPos: "+ mouseY,900,40);
+    text("Xpos: "+mouseX +"yPos: "+ mouseY,900,40); 
+
 }
 
 function mouseDragged(){
@@ -75,4 +76,11 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
+}
+
+function keyPressed(){
+    if(keyCode === 32){
+        slingshot.reattach(bird.body);
+    }
+
 }
